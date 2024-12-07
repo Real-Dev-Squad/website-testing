@@ -35,7 +35,7 @@ describe("New user navigates in the page", () => {
   test("New user sees a sign up page", async () => {
     await page.goto(HOME_PAGE);
 
-    await page.waitForResponse((res) => res.url().endsWith("/users/self"));
+    await page.waitForResponse((res) => res.url().endsWith("/users?profile=true"));
     await page.waitForSelector("button.login-btn-text");
 
     await Promise.all([

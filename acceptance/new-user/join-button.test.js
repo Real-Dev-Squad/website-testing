@@ -17,7 +17,7 @@ function confirmAlerts() {
 /* check status*/
 async function checkResponse() {
   await page.on("response", (response) => {
-    if (response.url().endsWith("/users/self")) {
+    if (response.url().endsWith("/users?profile=true")) {
           delay(2000)
           expect(response.status()).toBe(401);
           expect(page.url().endsWith("/join"));
