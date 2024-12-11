@@ -6,7 +6,7 @@ const HOME_PAGE = `${WWW_HOST}`;
 const SIGN_UP_PAGE = `${MY_HOST}/signup`;
 const JOIN = `${WWW_HOST}/?join=true`
 
-const SELF_USER_API = `${API_HOST}/users/self`;
+const SELF_USER_API = `${API_HOST}/users?profile=true`;
 
 module.exports = {
     HOME_PAGE,

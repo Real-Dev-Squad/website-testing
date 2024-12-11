@@ -23,7 +23,7 @@ describe("Navigation of Join with incomplete details", () => {
   test("Join button navigation", async () => {
     await page.setRequestInterception(true);
     page.on("request", (request) => {
-      if (request.url().endsWith("/users/self") && request.method() === "GET") {
+      if (request.url().endsWith("/users?profile=true") && request.method() === "GET") {
         request.respond({
           headers: {
             "Access-Control-Allow-Credentials": true,
